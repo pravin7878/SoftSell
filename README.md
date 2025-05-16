@@ -1,12 +1,67 @@
-# React + Vite
+# SoftSell
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive single-page marketing website for **SoftSell** — a fictional software license resale startup.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Hero Section:** Eye-catching headline, subheading, and CTA for instant engagement.
+- **How It Works:** Three-step process with visuals for clarity.
+- **Why Choose Us:** Key benefits with icons and concise descriptions.
+- **Testimonials:** Realistic dummy reviews from satisfied customers.
+- **Contact Form:** Name, Email, Company, License Type, and Message with frontend validation.
+- **Navigation & Footer:** Clean, accessible, and mobile-friendly.
+- **SEO Optimized:** Meta tags, favicon, and Open Graph/Twitter cards.
+- **Mobile Responsive:** Looks great on all devices.
+- **Modern UI:** Built with Tailwind CSS and React.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+---
+
+## 📦 Getting Started
+
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/pravin7878/SoftSell.git
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run locally:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 🌐 Deployment
+
+
+
+---
+
+## 🎨 Design Choices
+
+- **Color Palette:** Deep purples and dark backgrounds for a modern, trustworthy tech feel.
+- **Typography:** Bold, readable fonts for clarity and impact.
+- **Layout:** Responsive grid and flex layouts for all screen sizes.
+- **Icons & Visuals:** SVGs and avatars for a friendly, professional look.
+
+---
+
