@@ -1,6 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 
-const HeroSection = () => {
+const HeroSection = forwardRef(({
+  onHeroClick,
+  onHowClick,
+  onWhyClick,
+  onContactClick,
+}, ref) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -20,23 +25,11 @@ const HeroSection = () => {
 
           {/* Desktop Menu Links */}
           <div className="hidden md:flex items-center md:gap-8 text-white">
-            <a href="/" className="text-sm font-medium hover:text-purple-400 transition">
-              Home
-            </a>
-            <a href="#about" className="text-sm font-medium hover:text-purple-400 transition">
-              About
-            </a>
-            <a href="#how" className="text-sm font-medium hover:text-purple-400 transition">
-              How It Works
-            </a>
-            <a href="#why" className="text-sm font-medium hover:text-purple-400 transition">
-              Why Choose Us
-            </a>
-            <a href="#contact" className="text-sm font-medium hover:text-purple-400 transition">
-              Contact
-            </a>
+           <button onClick={onHeroClick} className="text-sm font-medium hover:text-purple-400 transition bg-transparent border-none cursor-pointer">Home</button>
+          <button onClick={onHowClick} className="text-sm font-medium hover:text-purple-400 transition bg-transparent border-none cursor-pointer">How It Works</button>
+          <button onClick={onWhyClick} className="text-sm font-medium hover:text-purple-400 transition bg-transparent border-none cursor-pointer">Why Choose Us</button>
+          <button onClick={onContactClick} className="text-sm font-medium hover:text-purple-400 transition bg-transparent border-none cursor-pointer">Contact</button>
             <a
-              href="#contact"
               className="cursor-pointer rounded-full border-2 py-2 px-6 border-white bg-white text-purple-900 hover:bg-purple-900 hover:text-white hover:shadow-lg transition duration-300 ease-in-out"
             >
               Get a Quote
@@ -70,23 +63,19 @@ const HeroSection = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden bg-black/90 px-4 py-6">
-            <a href="/" className="block py-2 text-white hover:text-purple-400">
+            <a onClick={onHeroClick} className="block py-2 text-white hover:text-purple-400">
               Home
             </a>
-            <a href="#about" className="block py-2 text-white hover:text-purple-400">
-              About
-            </a>
-            <a href="#how" className="block py-2 text-white hover:text-purple-400">
+            <a onClick={onHowClick} className="block py-2 text-white hover:text-purple-400">
               How It Works
             </a>
-            <a href="#why" className="block py-2 text-white hover:text-purple-400">
+            <a onClick={onWhyClick} className="block py-2 text-white hover:text-purple-400">
               Why Choose Us
             </a>
-            <a href="#contact" className="block py-2 text-white hover:text-purple-400">
+            <a onClick={onContactClick} className="block py-2 text-white hover:text-purple-400">
               Contact
             </a>
             <a
-              href="#contact"
               className="block mt-4 cursor-pointer rounded-full border-2 py-2 px-6 border-white bg-white text-purple-900 hover:bg-purple-900 hover:text-white hover:shadow-lg transition duration-300 ease-in-out text-center"
             >
               Get a Quote
@@ -96,7 +85,7 @@ const HeroSection = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative w-full flex items-center justify-center min-h-screen overflow-hidden bg-gradient-to-b from-[#121212] to-purple-800">
+      <section  ref={ref} className="relative w-full flex items-center justify-center min-h-screen overflow-hidden bg-gradient-to-b from-[#121212] to-purple-800">
         {/* Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
@@ -122,11 +111,11 @@ const HeroSection = () => {
           </p>
 
           {/* CTA Button */}
-          <div className="flex justify-center items-center mt-8" data-aos="fade-up" data-aos-delay="400">
+          <div className="flex  justify-center items-center mt-8" data-aos="fade-up" data-aos-delay="400">
             <a
-              href="#contact"
+              onClick={onContactClick}
               rel="noopener noreferrer"
-              className="relative flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white text-lg font-semibold rounded-full shadow-lg transform hover:scale-105 transition-transform duration-200"
+              className="relative flex cursor-pointer items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white text-lg font-semibold rounded-full shadow-lg transform hover:scale-105 transition-transform duration-200"
             >
               <span className="absolute inset-0 rounded-full bg-purple-600 opacity-50 animate-ping"></span>
               <span className="relative z-10 pr-2">Get a Quote</span>
@@ -136,7 +125,7 @@ const HeroSection = () => {
 
         {/* Scroll Down Icon */}
         <div className="absolute sm:bottom-14 bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <a href="#about" className="cursor-pointer">
+          <a onClick={onHowClick} className="cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-10 w-10 text-white"
@@ -149,10 +138,10 @@ const HeroSection = () => {
             </svg>
           </a>
         </div>
-      </section>
+     </section>
     </>
   );
-};
+});
 
 export default HeroSection;
 
