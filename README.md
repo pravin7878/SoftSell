@@ -51,8 +51,12 @@ A modern, responsive single-page marketing website for **SoftSell** — a fictio
 ---
 
 ## 🌐 Deployment
+I deployed it on vercel.
+Here is the live link you can checkout demo:  
+[Live Demo](https://soft-sell-sand.vercel.app)
 
 
+![Demo Screenshot](./src/assets/image.png)
 
 ---
 
